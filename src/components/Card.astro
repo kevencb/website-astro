@@ -1,0 +1,38 @@
+---
+export interface Props{
+    title: string;
+    content: string;
+    tags: string;
+    date: string;
+    authorApi: string;
+    authorName: string;
+}
+
+const {title, content, tags, date, authorApi, authorName} = Astro.props;
+---
+
+<article class="bg-white rounded-md overflow-hidden shadow">
+    <figure class="bg-slate-200 h-52 overflow-hidden ">
+        <img class="object-cover object-bottom w-full h-full" src="/images/blog-01.webp" alt="Developer">
+    </figure>
+    <section class="p-6 grid gap-3">
+        <h3 class="bg-cyan-600 text-white w-max py-1 px-3 text-xs rounded-full">
+            {tags}
+        </h3>
+        <h2 class="text-2xl font-bold text-slate-700 leading-tight">
+            {title}
+        </h2>
+        <p class="text-slate-500">
+            {content}
+        </p>
+    </section>
+    <footer class="pb-6 px-6 text-slate-500 text-xs flex items-center justify-between">
+        <p>
+            Posted: <time datetime="2023-05-15 19:00">{date}</time>
+        </p>
+        <p class="flex items-center gap-2">
+            Author: 
+            <img  class="w-6 h-6 rounded-full" src={authorApi} alt={authorName}>
+        </p>
+    </footer>
+</article>
