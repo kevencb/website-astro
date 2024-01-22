@@ -11,11 +11,11 @@ export interface Props{
 const {title, content, tags, date, authorApi, authorName} = Astro.props;
 ---
 
-<article class="bg-white rounded-md overflow-hidden shadow">
+<article class="bg-white rounded-md overflow-hidden shadow flex flex-col">
     <figure class="bg-slate-200 h-52 overflow-hidden ">
         <img class="object-cover object-bottom w-full h-full" src="/images/blog-01.webp" alt="Developer">
     </figure>
-    <section class="p-6 grid gap-3">
+    <section class="p-6 flex flex-col gap-4 flex-1">
         <h3 class="bg-cyan-600 text-white w-max py-1 px-3 text-xs rounded-full">
             {tags}
         </h3>
