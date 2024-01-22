@@ -1,0 +1,13 @@
+---
+export interface Props{
+    url: string,
+    name: string,
+}
+
+const {url, name} = Astro.props
+
+---
+
+<li>
+    <a class="block px-3 py-2 text-slate-700 rounded-md transition-colors hover:bg-sky-500 hover:text-white lg:bg-transparent lg:hover:text-cyan-600 lg:hover:bg-transparent" href={url}>{name}</a>
+</li>

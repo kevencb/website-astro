@@ -1,0 +1,19 @@
+---
+import Logo from "./Logo.astro";
+import ContentNavLink from "./ContentNavLink.astro";
+import ButtonDarkMode from "./Buttons/ButtonDarkMode.astro";
+import ButtonUser from "./Buttons/ButtonUser.astro";
+import ButtonMenu from "./Buttons/ButtonMenu.astro";
+---
+
+<nav class="flex justify-between items-center h-16 w-[90%] mx-auto lg:max-w-7xl">
+    <ButtonMenu/>
+    <div class="flex lg:flex-1">
+        <Logo/>
+        <ContentNavLink/>        
+    </div>
+    <div class="flex gap-2">
+        <ButtonDarkMode/>
+        <ButtonUser/>
+    </div>
+</nav>
