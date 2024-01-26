@@ -19,10 +19,10 @@ const {title, content, tags, date, authorApi, authorName} = Astro.props;
         <h3 class="bg-cyan-600 text-white w-max py-1 px-3 text-xs rounded-full">
             {tags}
         </h3>
-        <h2 class="text-2xl font-bold text-slate-700 leading-tight">
+        <h2 class="text-xl font-bold text-slate-700 leading-tight">
             {title}
         </h2>
-        <p class="text-slate-500">
+        <p class="text-slate-500 line-clamp-3 text-sm">
             {content}
         </p>
     </section>
